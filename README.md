@@ -1,7 +1,7 @@
 spyder-ide-website
 ==================
 
-This repository hosts the source code for generating the **Spyder IDE** Website using [Pelican](http://getpelican.com), a static python websiote generator.
+This repository hosts the source code for generating the [Spyder IDE](http://spyder-ide.org) Website using [Pelican](http://getpelican.com), a static python website generator.
 
 Installing
 ----------
@@ -10,13 +10,13 @@ Installing
 
 You need to have the anaconda distribution by continuum installed.
 
-'''python
+```python
 conda create --name --yes spyderweb python=2.7 pip
 
 source activate spyderweb
 
-pip install pelican markdown
-'''
+pip install -r requirements.txt
+```
 
 **Using pip and virtual env**
 
@@ -25,6 +25,6 @@ conda create --name --yes spyderweb python=2.7 pip
 
 source activate spyderweb
 
-pip install pelican markdown
-'''
+pip install -r requirements.txt
+```
 
