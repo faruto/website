@@ -1,0 +1,7 @@
+Title: PyQt API #1, PyQt API #2 and PySide compatibility
+Date: 2011-06-22 12:55
+Tags: thats, awesome
+Category: yeah
+Slug: blog/pyqt-and-pyside-compatibility
+Author: Pierre Raybaut
+Summary: Short version for index and feeds
