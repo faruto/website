@@ -5,14 +5,13 @@ from __future__ import unicode_literals
 """
 Ideas: 
 https://github.com/jantman/blog/blob/master/pelicanconf.py
-
+http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/
 
 """
 
 # Overall site-wide settings
 # --------------------------
-AUTHOR = u'Gonzalo Pe\xf1a'
-AUTHOR = u'Gonzalo Peña'
+AUTHOR = u'Spyder Development Team'
 SITENAME = u'Spyder IDE'
 #DISQUS_SITENAME = 'spyder'
 #GOOGLE_ANALYTICS = 'UA-2718127-2'
@@ -32,8 +31,6 @@ DEFAULT_CATEGORY = "Miscellaneous"
 THEME = 'theme-bootstrap3/'
 BOOTSTRAP_THEME = 'cosmo'
 
-
-
 # Content / Files
 # ---------------
 OUTPUT_PATH = 'output/'
@@ -46,19 +43,24 @@ IGNORE_FILES = ['.#*']
 #ARTICLE_PATHS = ['content/blog']
 #ARTICLE_EXCLUDES = ['pages',]
 
+SITEMAP_SAVE_AS = 'sitemap.xml'
+
 STATIC_PATHS = [
     'CNAME',
     'GFX',
-    'static/favicon.ico',
-    'static/robots.txt',
-    'static/googleea75ea27535d4ffe.html',
+    'extra/favicon.ico',
+    'extra/robots.txt',
+    'extra/googleea75ea27535d4ffe.html',
+    'images',
 ]
+
 EXTRA_PATH_METADATA = {
-    'static/favicon.ico': {'path': 'favicon.ico'},
-    'static/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/robots.txt': {'path': 'robots.txt'},
     'static/googleea75ea27535d4ffe.html': {'path': 'googleea75ea27535d4ffe.html'},
 }
 
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
 # URL settings
 # ------------
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{slug}/'
