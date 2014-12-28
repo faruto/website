@@ -47,7 +47,7 @@ BOOTSTRAP_THEME = 'cosmo'
 # theme specific settings
 # -----------------------
 SHOW_ARTICLE_AUTHOR = True
-SITELOGO = 'images/img_src/spyder.png' 
+SITELOGO = 'images/spyder.png' 
 SITELOGO_SIZE = '30px' 
 HIDE_SITENAME = False
 #DISPLAY_BREADCRUMBS = True
