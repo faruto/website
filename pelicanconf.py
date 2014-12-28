@@ -34,9 +34,9 @@ DEFAULT_CATEGORY = "Miscellaneous"
 
 # Theme settings
 # --------------
-THEME = 'theme-bootstrap3'
+# based on https://github.com/DandyDev/pelican-bootstrap3
+THEME = 'theme'
 BOOTSTRAP_THEME = 'cosmo'
-#BOOTSTRAP_THEME = 'lumen'
 
 # theme specific settings
 # -----------------------
