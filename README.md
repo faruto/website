@@ -28,11 +28,13 @@ pip install -r requirements.txt
 virtualenv .env
 source .env/bin/activate
 pip install -r requirements.txt
+```
 
 Fresh install (install latest available packages)
 -------------------------------------------------
 
 **Using conda (Recommended, you are using Spyder after all!)**
+
 You need to have the anaconda distribution by continuum installed.
 
 ```bash
@@ -42,6 +44,7 @@ pip install fabric pelican markdown beautifulsoup4
 ```
 
 **Using pip and virtual env**
+
 ```bash
 virtualenv .env
 source .env/bin/activate
@@ -50,6 +53,7 @@ pip install fabric pelican markdown beautifulsoup4
 
 Run test site locally
 ---------------------
+
 ```bash
 cd spyder-ide-website
 fab serve
