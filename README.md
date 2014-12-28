@@ -14,6 +14,7 @@ Installation
 ------------
 
 **Using conda (Recommended, you are using Spyder after all!)**
+
 You need to have the anaconda distribution by continuum installed.
 
 ```bash
