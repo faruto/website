@@ -6,6 +6,14 @@ from __future__ import unicode_literals
 Ideas: 
 https://github.com/jantman/blog/blob/master/pelicanconf.py
 http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/
+https://github.com/dreikanter/markdown-grid
+
+Look and feel inspiration:
+https://www.jetbrains.com/pycharm/
+http://ninja-ide.org/
+http://nl.mathworks.com/products/matlab/
+http://www.rstudio.com/
+http://brackets.io/
 
 """
 
@@ -18,49 +26,82 @@ SITENAME = u'Spyder IDE'
 #GA_DOMAIN = 'jasonantman.com'
 SITEURL = ''
 
-PATH = 'content'
-
 TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = u'en'
 
 DEFAULT_CATEGORY = "Miscellaneous"
 
-# Theme
-# -----
-THEME = 'theme-bootstrap3/'
+# Theme settings
+# --------------
+THEME = 'theme-bootstrap3'
 BOOTSTRAP_THEME = 'cosmo'
+#BOOTSTRAP_THEME = 'lumen'
 
+# theme specific settings
+# -----------------------
+SHOW_ARTICLE_AUTHOR = True
+SITELOGO = 'images/img_src/spyder.png' 
+SITELOGO_SIZE = '30px' 
+HIDE_SITENAME = False
+#DISPLAY_BREADCRUMBS = True
+
+3
 # Content / Files
 # ---------------
+PATH = 'content'
 OUTPUT_PATH = 'output/'
-
 IGNORE_FILES = ['.#*']
-
-#PATH = 'content/'
-#PAGE_PATHS = ['pages']
-#PAGE_EXCLUDES = []
-#ARTICLE_PATHS = ['content/blog']
+PAGE_PATHS = ['pages']
+PAGE_EXCLUDES = []
+ARTICLE_PATHS = ['blog']
 #ARTICLE_EXCLUDES = ['pages',]
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
 STATIC_PATHS = [
     'CNAME',
-    'GFX',
+    'images',
     'extra/favicon.ico',
     'extra/robots.txt',
-    'extra/googleea75ea27535d4ffe.html',
-    'images',
+#    'GFX',
+#    'extra/googleea75ea27535d4ffe.html',
 ]
 
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'static/googleea75ea27535d4ffe.html': {'path': 'googleea75ea27535d4ffe.html'},
+    #'static/googleea75ea27535d4ffe.html': {'path': 'googleea75ea27535d4ffe.html'},
 }
 
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
+DIRECT_TEMPLATES = (
+    'index',
+    'tags',
+    'categories',
+    'archives',
+    'sitemap',
+    'search'
+)
+
+# Menu configuration
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+#    ('Home', '/'),
+    ('Features', '/features/'),
+    ('Documentation', '/docs/'),
+    ('Plugins', '/plugins/'),
+    ('Contribute', '/contribute/'),
+    ('Support', '/support/'),
+    ('Blog', '/blog/'),
+#    ('Resources', '/resources/'),
+#    ('Archives', '/archives.html'),
+#    ('Tags', '/tags.html'),
+#    ('Category1', 'category/category1.html'),
+#    ('Category2', 'category/category2.html'),
+)
+
 # URL settings
 # ------------
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{slug}/'
@@ -73,6 +114,12 @@ TAG_URL = 'tags/{slug}/index.html'
 TAG_SAVE_AS = TAG_URL
 TAGS_URL = 'tags.html'
 TAGS_SAVE_AS = TAGS_URL
+INDEX_SAVE_AS = 'blog/index.html'
+
+# Plugins
+# -------
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['tipue_search']
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -82,10 +129,12 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+    ('Twitter', 'http://twitter.com/Spyder_IDE'),
+#    ('Python.org', 'http://python.org/'),
+#    ('Jinja2', 'http://jinja.pocoo.org/'),
+#    ('You can modify those links in your config file', '#'),
+)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
