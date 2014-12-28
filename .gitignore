@@ -1,6 +1,8 @@
 # Custom
+img_src
 output
 cache
+.env
 
 # Python
 *.py[cod]
