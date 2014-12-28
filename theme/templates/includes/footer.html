@@ -1,0 +1,80 @@
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         {% if articles %}
+            {% set copy_date = articles[0].date.strftime('%Y') %}
+         {% else %}
+            {% set copy_date = '' %}
+         {% endif %}
+         <div class="col-xs-10">&copy; {{ copy_date }} {{ AUTHOR }}
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+            {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
+              {% from 'includes/cc-license.html' import cc_license_mark %}
+              <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
+            {% endif %}
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+
+
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading">Quick Links</h5>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                     <h5 class="widgetheading">Videos</h5>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                     <h5 class="widgetheading">Get Involved</h5>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading">Latest news</h5>
+<a class="twitter-timeline" href="https://twitter.com/Spyder_IDE" data-widget-id="549146314311598081">Tweets by @Spyder_IDE</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+                <hr />
+                {% if articles %}
+                {% set copy_date = articles[0].date.strftime('%Y') %}
+                {% else %}
+                {% set copy_date = '' %}
+                {% endif %}
+                <div class="col-xs-10">
+                    &copy; {{ copy_date }} {{ AUTHOR }} &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>, <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+                {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
+                {% from 'includes/cc-license.html' import cc_license_mark %}
+                <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
+            {% endif %}
+                </div>
+                <div class="col-xs-1">
+                    <div class="social">
+                        <a title="Facebook" href="https://www.facebook.com/sihsaltda"><i class="fa fa-facebook"> </i></a>
+                        <a title="Twitter" href="https://twitter.com/SIHSALtda"><i class="fa fa-twitter"> </i></a>
+                        <a title="Linkedin" href="https://www.linkedin.com/company/sihsa-ltda-"><i class="fa fa-linkedin"> </i></a>
+                    </div>
+                </div>
+                <div class="col-xs-1">
+                    <p class="pull-right"><a href="#"><i class="fa fa-arrow-up"></i></a></p>
+                </div>
+            </div>
+         </div>
+     </div>
+</footer>
