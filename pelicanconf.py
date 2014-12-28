@@ -3,17 +3,23 @@
 from __future__ import unicode_literals
 
 """
-Ideas: 
+Ideas:
+------
 https://github.com/jantman/blog/blob/master/pelicanconf.py
 http://moparx.com/2014/04/adding-search-capabilities-within-your-pelican-powered-site-using-tipue-search/
 https://github.com/dreikanter/markdown-grid
 
 Look and feel inspiration:
+--------------------------
 https://www.jetbrains.com/pycharm/
 http://ninja-ide.org/
 http://nl.mathworks.com/products/matlab/
 http://www.rstudio.com/
 http://brackets.io/
+
+domain config:
+--------------
+https://help.github.com/articles/my-custom-domain-isn-t-working/
 
 """
 
@@ -21,7 +27,7 @@ http://brackets.io/
 # --------------------------
 AUTHOR = u'Spyder Development Team'
 SITENAME = u'Spyder IDE'
-#DISQUS_SITENAME = 'spyder'
+DISQUS_SITENAME = 'spyder-ide'
 #GOOGLE_ANALYTICS = 'UA-2718127-2'
 #GA_DOMAIN = 'jasonantman.com'
 SITEURL = ''
@@ -46,7 +52,7 @@ SITELOGO_SIZE = '30px'
 HIDE_SITENAME = False
 #DISPLAY_BREADCRUMBS = True
 
-3
+
 # Content / Files
 # ---------------
 PATH = 'content'
@@ -57,6 +63,7 @@ PAGE_EXCLUDES = []
 ARTICLE_PATHS = ['blog']
 #ARTICLE_EXCLUDES = ['pages',]
 
+DEFAULT_CATEGORY = 'miscelaneous'
 SITEMAP_SAVE_AS = 'sitemap.xml'
 
 STATIC_PATHS = [
@@ -116,6 +123,12 @@ TAGS_URL = 'tags.html'
 TAGS_SAVE_AS = TAGS_URL
 INDEX_SAVE_AS = 'blog/index.html'
 
+# fix this... not working?
+AUTHOR_URL = 'author/{slug}/'
+AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+
+
+
 # Plugins
 # -------
 PLUGIN_PATHS = ['plugins']
@@ -140,7 +153,7 @@ LINKS = (
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
