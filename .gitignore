@@ -3,6 +3,7 @@ img_src
 output
 cache
 .env
+*.pid
 
 # Python
 *.py[cod]

@@ -43,6 +43,7 @@ DEFAULT_CATEGORY = "Miscellaneous"
 # based on https://github.com/DandyDev/pelican-bootstrap3
 THEME = 'theme'
 BOOTSTRAP_THEME = 'cosmo'
+BOOTSTRAP_THEME = 'spacelab'
 
 # theme specific settings
 # -----------------------
@@ -50,6 +51,7 @@ SHOW_ARTICLE_AUTHOR = True
 SITELOGO = 'images/spyder.png' 
 SITELOGO_SIZE = '30px' 
 HIDE_SITENAME = False
+CUSTOM_CSS = 'static/custom.css'
 #DISPLAY_BREADCRUMBS = True
 
 
@@ -71,6 +73,7 @@ STATIC_PATHS = [
     'images',
     'extra/favicon.ico',
     'extra/robots.txt',
+    'extra/custom.css'
 #    'GFX',
 #    'extra/googleea75ea27535d4ffe.html',
 ]
@@ -78,6 +81,7 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/custom.css': {'path': 'static/custom.css'}
     #'static/googleea75ea27535d4ffe.html': {'path': 'googleea75ea27535d4ffe.html'},
 }
 

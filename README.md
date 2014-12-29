@@ -1,5 +1,5 @@
-spyder-ide-website
-==================
+Website
+=======
 
 This repository hosts the source code for generating the [Spyder IDE](http://spyder-ide.org) Website using [Pelican](http://getpelican.com), a static python website generator. If you want to give it a try just clone the repository or fork it if you feel like submitting some changes!
 

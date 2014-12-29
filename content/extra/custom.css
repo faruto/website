@@ -1,0 +1,26 @@
+
+
+
+
+/* footer */
+
+.footer-area {
+    background-color: #414141;
+    height: 360px;
+    padding-top: 16px;
+}
+
+.footer-area h3 {
+    color: #fafafa;
+}
+
+#footer {
+    font-size: 75%;
+    background-color: #313131;
+    color: #fafafa;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    border-top-style: solid;
+    border-top-color: #212121;
+    border-top-width: 1px;
+}

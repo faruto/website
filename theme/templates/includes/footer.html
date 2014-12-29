@@ -1,56 +1,54 @@
-<footer>
+<footer class="footer-area">
     <div class="container">
-        <hr>
         <div class="row">
-            <div class="col-lg-3">
-                <div class="widget">
-                    <h5 class="widgetheading">Quick Links</h5>
-                </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h5>
             </div>
-            <div class="col-lg-3">
-                <div class="widget">
-                     <h5 class="widgetheading">Videos</h5>
-                </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h5>
             </div>
-            <div class="col-lg-3">
-                <div class="widget">
-                     <h5 class="widgetheading">Get Involved</h5>
-                </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h5>
             </div>
-            <div class="col-lg-3">
-                <div class="widget">
-                    <h5 class="widgetheading">Latest news</h5>
-<a class="twitter-timeline" href="https://twitter.com/Spyder_IDE" data-widget-id="549146314311598081">Tweets by @Spyder_IDE</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-md-3">
+                <h3>Quick Links</h5>
+                <a class="twitter-timeline"
+                 href="https://twitter.com/Spyder_IDE"
+                 data-widget-id="549146314311598081"
+                 data-chrome="nofooter transparent noheader nofooter noscrollbar noborders"
+                 width="300"
+                 height="500"
+                 data-tweet-limit="3">
+                Tweets by @Spyder_IDE
+                </a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
 	</div>
-        <div id="sub-footer">
+    </div>
+</footer>
+<footer id="footer">
             <div class="container">
                 <div class="row">
-                    <hr />
                     {% if articles %}
                     {% set copy_date = articles[0].date.strftime('%Y') %}
                     {% else %}
                     {% set copy_date = '' %}
                     {% endif %}
-                    <div class="col-xs-10">
-                        &copy; {{ copy_date }} {{ AUTHOR }} &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>, <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+                    <div class="col-md-6">
+                        &copy; {{ copy_date }} {{ AUTHOR }} &middot; Powered by <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
                         {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
                         {% from 'includes/cc-license.html' import cc_license_mark %}
                         <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
                         {% endif %}
                     </div>
-                    <div class="col-xs-1">
+                    <div class="col-md-5">
                         <div class="social">
-                            <a title="Google+" href="https://plus.google.com/u/0/b/107193318474220481102/107193318474220481102/posts"><i class="fa fa-google-plus"> </i></a>
-                            <a title="Facebook" href="https://www.facebook.com/pages/Spyder-IDE/1575444006019383"><i class="fa fa-facebook"> </i></a>
-                            <a title="Twitter" href="https://twitter.com/Spyder_IDE"><i class="fa fa-twitter"> </i></a>
+                            <a title="Google+" href="https://plus.google.com/u/0/b/107193318474220481102/107193318474220481102/posts" target="_blank"><i class="fa fa-google-plus fa-2x"> </i></a>
+                            <a title="Facebook" href="https://www.facebook.com/pages/Spyder-IDE/1575444006019383" target="_blank"><i class="fa fa-facebook fa-2x"> </i></a>
+                            <a title="Twitter" href="https://twitter.com/Spyder_IDE" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a>
                         </div>
                     </div>
-                    <div class="col-xs-1">
+                    <div class="col-md-1">
                         <p class="pull-right"><a href="#"><i class="fa fa-arrow-up"></i></a></p>
                     </div>
                 </div>
