@@ -36,7 +36,6 @@ TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = u'en'
 
-DEFAULT_CATEGORY = "Miscellaneous"
 
 # Theme settings
 # --------------
@@ -47,12 +46,14 @@ BOOTSTRAP_THEME = 'spacelab'
 
 # theme specific settings
 # -----------------------
+HIDE_SIDEBAR = False
 SHOW_ARTICLE_AUTHOR = True
 SITELOGO = 'images/spyder.png' 
-SITELOGO_SIZE = '30px' 
+SITELOGO_SIZE = '20px' 
 HIDE_SITENAME = False
 CUSTOM_CSS = 'static/custom.css'
-#DISPLAY_BREADCRUMBS = True
+DISPLAY_BREADCRUMBS = False
+PYGMENTS_STYLE = 'tango'
 
 
 # Content / Files
@@ -101,7 +102,8 @@ DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
 #    ('Home', '/'),
     ('Features', '/features/'),
-    ('Documentation', '/docs/'),
+    ('Documentation', 'https://pythonhosted.org/spyder/'),
+#    ('Documentation', '/docs/'),
     ('Plugins', '/plugins/'),
     ('Contribute', '/contribute/'),
     ('Support', '/support/'),
@@ -135,7 +137,7 @@ AUTHOR_SAVE_AS = 'author/{slug}/index.html'
 
 # Plugins
 # -------
-PLUGIN_PATHS = ['plugins']
+PLUGIN_PATHS = ['plugins', 'pelican-plugins']
 PLUGINS = ['tipue_search']
 
 # Feed generation is usually not desired when developing
@@ -147,7 +149,7 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ('Twitter', 'http://twitter.com/Spyder_IDE'),
+#    ('Twitter', 'http://twitter.com/Spyder_IDE'),
 #    ('Python.org', 'http://python.org/'),
 #    ('Jinja2', 'http://jinja.pocoo.org/'),
 #    ('You can modify those links in your config file', '#'),

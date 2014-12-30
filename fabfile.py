@@ -5,8 +5,13 @@ import sys
 import SimpleHTTPServer
 import SocketServer
 
+from pelicanconf import OUTPUT_PATH
+
+# Globals
+REMOVE_EXTENSIONS = ['.pyc', '~']
+
 # Local path configuration (can be absolute or relative to fabfile)
-env.deploy_path = 'output'
+env.deploy_path = OUTPUT_PATH  # from the pelicanconf.py
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
@@ -23,6 +28,8 @@ def clean():
     if os.path.isdir(DEPLOY_PATH):
         local('rm -rf {deploy_path}'.format(**env))
         local('mkdir {deploy_path}'.format(**env))
+	for ext in REMOVE_EXTENSIONS:
+            local("find . -type f | grep '{0}'$ | xargs rm".format(ext))
 
 def build():
     local('pelican -s pelicanconf.py')
@@ -47,6 +54,7 @@ def serve():
     server.serve_forever()
 
 def reserve():
+    clean()
     build()
     serve()
 

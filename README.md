@@ -6,8 +6,8 @@ This repository hosts the source code for generating the [Spyder IDE](http://spy
 Download 
 --------
 ```bash
-git clone https://github.com/goanpeca/spyder-ide-website.git spyder-ide-website
-cd spyder-ide-website
+git clone https://github.com/spyder-ide/website.git spyder-website
+cd spyder-website
 ```
 
 Installation
@@ -56,6 +56,6 @@ Run test site locally
 ---------------------
 
 ```bash
-cd spyder-ide-website
+cd spyder-website
 fab serve
 ```
