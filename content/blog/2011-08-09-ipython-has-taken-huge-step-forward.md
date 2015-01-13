@@ -1,7 +1,7 @@
 Title: IPython has taken a huge step forward!
 Date: 2011-08-09 07:07
-Tags: 
-Category: 
+Tags: iPython
+Category: Spyder
 Slug: ipython-has-taken-huge-step-forward
 Author: Pierre Raybaut
 Summary: 

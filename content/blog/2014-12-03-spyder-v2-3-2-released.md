@@ -1,8 +1,8 @@
 Title: Spyder 2.3.2 released
 Date: 2014-12-03 13:26
-Tags: 
-Category: 
-Slug: spyder-2.3.2-released
+Tags: v2-3-2, release
+Category: Releases
+Slug: spyder-v2-3-2-released
 Author: Carlos Córdoba
 Summary: 
 

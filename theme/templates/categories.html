@@ -1,18 +1,30 @@
-{% extends "base.html" %}
+{% extends "base_sidebar.html" %}
 {% block title %}Categories - {{ SITENAME }}{% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
-        <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-        <li class="active">Categories</li>
-    </ol>
+        <div class="under-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <br><h1>Blog Categories</h1>
+                    </div>
+                    <div class="col-xs-6">
+    {% if DISPLAY_BREADCRUMBS %}<br>
+        <ol class="breadcrumb pull-right">
+            <li ><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+            <li class="active">Categories</li>
+        </ol>
     {% endif %}
+
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="separator_shadow"></div>
 {% endblock %}
 
 {% block content %}
     <section id="categories">
-        <h1>All Categories for {{ SITENAME }}</h1>
         <div class="panel-group" id="accordion">
             {% for category, articles in categories %}
             <div class="panel panel-default">

@@ -1,8 +1,8 @@
 Title: Spyder v2.1 is available
 Date: 2011-11-04 04:10
-Tags: 
-Category: 
-Slug: spyder-v2.1-is-available
+Tags: v2-1, release
+Category: Releases
+Slug: spyder-v2-1-is-available
 Author: Pierre Raybaut
 Summary: 
 

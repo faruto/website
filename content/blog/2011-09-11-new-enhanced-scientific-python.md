@@ -1,12 +1,13 @@
 Title: New Enhanced Scietific Python
 Date: 2011-09-11 04:10
-Tags: 
-Category: 
+Tags: Modes, Interpreter
+Category: Spyder
 Slug: new-enhanced-scientific-python.
 Author: Pierre Raybaut
 Summary: 
 
 New enhanced scientific Python interpreter
+
 As I mentionned in my previous post, the standard Python interpreter provided by Spyder's console has been considerably enhanced. Moreover, despite these interesting enhancements, this is based on a real Python interpreter, not an emulation.
 
 The scientific startup script mentionned in my previous post was integrated in Spyder's development version (under the name scientific_startup.py).

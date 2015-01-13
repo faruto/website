@@ -1,7 +1,7 @@
 Title: Welcome to Spyder's blog
 Date: 2011-06-15 13:23
-Tags: thats, awesome
-Category: yeah
+Tags: Features
+Category: Spyder
 Slug: welcome-to-spyders-blog
 Author: Pierre Raybaut
 Summary: Short version for index and feeds

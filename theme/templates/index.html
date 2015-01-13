@@ -2,6 +2,28 @@
 
 {% block canonical_rel %}<link rel="canonical" href="{{ SITEURL }}">{% endblock %}
 
+{% block breadcrumbs %}
+        <div class="under-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <br><h1>Blog</h1>
+                    </div>
+                    <div class="col-md-6">
+                    {% if DISPLAY_BREADCRUMBS %}
+                        <br>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+                            <li class="active">Blog</li>
+                        </ol>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator_shadow"></div>
+{% endblock %}
+
 {% block banner %}
 	{% include 'includes/banner.html' %}
 {% endblock %}

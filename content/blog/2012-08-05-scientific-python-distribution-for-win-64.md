@@ -1,7 +1,7 @@
 Title: Scientific Python distribution for Windows 64bit
 Date: 2012-08-05 07:05
-Tags: 
-Category: 
+Tags: Windows
+Category: Spyder
 Slug: scientific-python-distribution-for-win-64
 Author: Pierre Raybaut
 Summary: 

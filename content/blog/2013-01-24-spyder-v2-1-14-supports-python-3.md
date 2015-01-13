@@ -1,8 +1,8 @@
 Title: Spyder v2.1.14 supports Python 3
 Date: 2014-01-24 12:24
-Tags: 
-Category: 
-Slug: spyder-v2.1.14-supports-python-3
+Tags: Py3, v2-1-14
+Category: Spyder
+Slug: spyder-v2-1-14-supports-python-3
 Author: Pierre Raybaut
 Summary: 
 
@@ -19,6 +19,8 @@ For example, Windows users may already start working with a full featured scient
 
 Note that even if  [Spyder v2.1.14](http://code.google.com/p/spyderlib/source/checkout?repo=v21) supports Python 3, the forthcoming Spyder v2.2 release won't support it: Python 3 support will be officially implemented in Spyder v2.3 which will hopefully be released shortly after v2.2.
 
+
+<!--
 5 comments:
 ===========
 
@@ -54,3 +56,5 @@ Spyder v2.3.0dev5 (then dev6) was already pretty stable when it was released thi
 Now Spyder v2.3.0beta1 has been released and is also quite stable. So you may already test it (without too much risks).
 
 Reply
+
+-->

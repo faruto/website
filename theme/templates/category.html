@@ -5,11 +5,24 @@
     <meta name="keywords" content="{{ category }}" />
 {% endblock %}
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-    <ol class="breadcrumb">
+        <div class="under-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <br><h1>{{category}}</h1>
+                    </div>
+                    <div class="col-md-6">
+    {% if DISPLAY_BREADCRUMBS %}<br>
+    <ol class="breadcrumb pull-right">
         <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
         <li><a href="{{ SITEURL}}/{{ CATEGORIES_URL }}" title="{{ SITENAME }} Categories">Categories</a></li>
         <li class="active">{{ category }}</li>
     </ol>
     {% endif %}
+
+</div>
+                </div>
+            </div>
+        </div>
+        <div class="separator_shadow"></div>
 {% endblock %}

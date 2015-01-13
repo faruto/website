@@ -1,6 +1,7 @@
 from fabric.api import *
 import fabric.contrib.project as project
 import os
+import shutil
 import sys
 import SimpleHTTPServer
 import SocketServer
@@ -26,10 +27,11 @@ env.cloudfiles_container = 'my_cloudfiles_container'
 
 def clean():
     if os.path.isdir(DEPLOY_PATH):
-        local('rm -rf {deploy_path}'.format(**env))
-        local('mkdir {deploy_path}'.format(**env))
-	for ext in REMOVE_EXTENSIONS:
-            local("find . -type f | grep '{0}'$ | xargs rm".format(ext))
+        shutil.rmtree(env.deploy_path)
+        #local('rm -rf {deploy_path}'.format(**env))
+        #local('mkdir {deploy_path}'.format(**env))
+	#for ext in REMOVE_EXTENSIONS:
+    #        local("find . -type f | grep '{0}'$ | xargs rm".format(ext))
 
 def build():
     local('pelican -s pelicanconf.py')

@@ -1,7 +1,7 @@
 Title: Preview of the new IPython plugin for Spyder
 Date: 2011-08-13 08:42
-Tags: 
-Category: 
+Tags: iPython
+Category: Spyder
 Slug: preview-of-new-ipython-plugin-for-spyder
 Author: Pierre Raybaut
 Summary: 

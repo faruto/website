@@ -1,8 +1,8 @@
 Title: No IPython v0.11 support in Spyder's console, but standard Python interpreter enhancements
 Date: 2011-09-04 07:22
-Tags: 
-Category: 
-Slug: no-ipython-v0.11-support-in-spyder
+Tags: iPython, v0-11
+Category: Spyder
+Slug: no-ipython-v0-11-support-in-spyder
 Author: Pierre Raybaut
 Summary: 
 

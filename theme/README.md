@@ -2,9 +2,11 @@
 
 Based on the following, made changes to:
 
-footer.html
+**footer.html**
+A footer area was included to have 4 sections on the bottom
 
-
+**base.html**
+It was redesigned so that the content was not fixed to a sidebar, but isntead and empty block, so the other pages could be defined more freely. The code corresponding to the sidebar was moved to the article and the documentation (sphinx... to be done)
 
 # pelican-bootstrap3
 

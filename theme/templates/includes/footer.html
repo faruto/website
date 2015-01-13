@@ -35,20 +35,24 @@
                     {% set copy_date = '' %}
                     {% endif %}
                     <div class="col-md-10">
-                        &copy; {{ copy_date }} {{ AUTHOR }} &middot; Powered by <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+                        <ul>
+<li>
+                        &copy; {{ copy_date }} <a href="https://github.com/orgs/spyder-ide/people" target="_blank">{{ AUTHOR }}</a> &middot; Powered by <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
                         {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
                         {% from 'includes/cc-license.html' import cc_license_mark %}
                         <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
                         {% endif %}
+</li>
+</ul>
                     </div>
                     <div class="col-md-2">
-                        <div class="social">
+
                             <ul class="social-network">
                                 <li><a title="Google+" href="https://plus.google.com/u/0/b/107193318474220481102/107193318474220481102/posts" target="_blank"><i class="fa fa-google-plus fa-2x"> </i></a></li>
                                 <li><a title="Facebook" href="https://www.facebook.com/pages/Spyder-IDE/1575444006019383" target="_blank"><i class="fa fa-facebook fa-2x"> </i></a></li>
                                 <li><a title="Twitter" href="https://twitter.com/Spyder_IDE" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a></li>
+                                <li><a title="Github" href="https://github.com/spyder-ide" target="_blank"><i class="fa fa-github fa-2x"> </i></a></li>
                             </ul>
-                        </div>
                     </div>
 
                 </div>

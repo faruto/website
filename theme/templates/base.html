@@ -62,6 +62,7 @@
     <link href="{{ SITEURL }}/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="{{ SITEURL }}/theme/css/pygments/{{ PYGMENTS_STYLE|default('native') }}.css" rel="stylesheet">
+
     {% if 'tipue_search' in PLUGINS %}
     <link href="{{ SITEURL}}/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
     {% endif %}
@@ -85,10 +86,14 @@
               title="{{ SITENAME }} RSS Feed"/>
     {% endif %}
 
+    <!-- lightbox -->
+    <link href="{{ SITEURL }}/theme/css/ekko-lightbox.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %} navbar-fixed-top" role="navigation">
+<div class="navbar {% if BOOTSTRAP_NAVBAR_INVERSE %}navbar-inverse{% else %}navbar-default{% endif %}" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -105,7 +110,13 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
                 {% for title, link in MENUITEMS %}
-                    <li><a href="{{ link }}">{{ title }}</a></li>
+                    {% set stripped_link = link|replace('/', '', 1)%}
+                    {% if stripped_link in output_file %}
+                        {% set link_state = 'class="active"' %}
+                    {% else %}
+                        {% set link_state = '' %}
+                    {% endif %}
+                    <li {{link_state}}><a href="{{ link }}">{{ title }}</a></li>
                 {% endfor %}
                 {% if DISPLAY_PAGES_ON_MENU %}
                     {% for p in PAGES %}
@@ -122,11 +133,15 @@
                     {% endfor %}
                 {% endif %}
             {% if 'tipue_search' in PLUGINS %}
-              <li><span>
-                <form class="navbar-search" action="/search.html">
+              <li>
+                   <a href="{{ SITEURL }}/search.html"><i class="fa fa-search"></i></a>
+                <div class="well" id="main_search_box" style="display:none;">
+                 <form class="navbar-search" action="/search.html">
                   <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
-                </form></span>
+                </form>
+                </div>
               </li>
+
 
             {% endif %}
 <!--
@@ -144,33 +159,8 @@
     {% block banner %}{% endblock %}
 {% endif %}
 <!-- End Banner -->
-<div class="container">
-    <div class="row">
-        {% if not HIDE_SIDEBAR or ABOUT_ME %}
-        <div class="col-sm-9">
-        {% else %}
-        <div class="col-lg-12">
-        {% endif %}
-        {% block breadcrumbs %}
-        {% endblock %}
-
-        {% block content %}
-        {% endblock %}
-        </div>
-        {% if not HIDE_SIDEBAR or ABOUT_ME %}
-        <div class="col-sm-3" id="sidebar">
-            <aside>
-            {% if ABOUT_ME %}
-                {% include 'includes/aboutme.html' %}
-            {% endif %}
-            {% if not HIDE_SIDEBAR %}
-                {% include 'includes/sidebar.html' %}
-            {% endif %}
-            </aside>
-        </div>
-        {% endif %}
-    </div>
-</div>
+{% block full_content %}
+{% endblock %}
 {% include 'includes/footer.html' %}
 
 <script src="{{ SITEURL }}/theme/js/jquery.min.js"></script>
@@ -184,6 +174,9 @@
 {% if BANNER %}
     <script src="{{ SITEURL }}/theme/js/bodypadding.js"></script>
 {% endif %}
+
+{% include 'includes/menu_script.html' %}
+{% include 'includes/lightbox_script.html' %}
 {% include 'includes/github-js.html' %}
 {% include 'includes/disqus_script.html' %}
 {% include 'includes/ga.html' %}

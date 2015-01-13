@@ -59,3 +59,12 @@ Run test site locally
 cd spyder-website
 fab serve
 ```
+
+TODO LIST:
+========== and use inspiration from 
+* Create a slider for the homepage (small slider inside a full width colored backgroud) but sliderr only on the righr
+* Create a Capabilitirws (a la matlab site for the homepage with links to the feature page if more info is needed.)
+* Take better pictures (up to date) for the features page
+* [Lightbox plugin for images and embeded movies](http://ashleydw.github.io/lightbox/#single-image) or [blueimp](https://github.com/blueimp/Bootstrap-Image-Gallery)
+* When the github move is ready make sure the members list is updated and a feed of [contributors display](http://brackets.io/contribute.html)...
+

@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_sidebar.html" %}
 {% block title %}{{ article.title|striptags }} - {{ SITENAME }}{% endblock %}
 {% block html_lang %}{{ article.lang }}{% endblock %}
 {% block meta %}
@@ -51,35 +51,37 @@
 {% endblock %}
 
 {% block breadcrumbs %}
-    {% if DISPLAY_BREADCRUMBS %}
-        {% if DISPLAY_CATEGORY_IN_BREADCRUMBS %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="{{ SITEURL }}/{{ article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% else %}
-            <ol class="breadcrumb">
-                <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
-        {% endif %}
-    {% endif %}
+        <div class="under-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <br><h1>Blog Post</h1>
+                    </div>
+                    <div class="col-md-6">
+                    {% if DISPLAY_BREADCRUMBS %}
+                        <br>
+                        <ol class="breadcrumb pull-right">
+                            <li><a href="{{ SITEURL }}" title="{{ SITENAME }}"><i class="fa fa-home fa-lg"></i></a></li>
+                            {% set crumbs = output_file.split('/') %}
+                            {% set temp = [] %}
+                            {% for crumb in crumbs[:-2] %}
+                            <li><a href="{{'/' ~ crumbs[:loop.index]|join('/') ~ '/'}}" title="crumb">{{crumb}}</a></li>
+                            {% endfor %}
+                            <li class="active">{{ article.title }}</li>
+                        </ol>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator_shadow"></div>
 {% endblock %}
 
 {% block content %}
-    <section id="content">
+    <section id="content" class="well well-sm">
         <article>
-            <header class="page-header">
-                <h1>
-                    <a href="{{ SITEURL }}/{{ article.url }}"
-                       rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
-                        {{ article.title }}
-                    </a>
-                </h1>
-            </header>
             <div class="entry-content">
+                <h2>{{article.title}}</h2>
                 <div class="panel">
                     <div class="panel-body">
                         {% include "includes/article_info.html" %}

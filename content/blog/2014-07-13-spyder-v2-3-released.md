@@ -1,8 +1,8 @@
 Title: Spyder 2.3 has been released
 Date: 2014-07-13 21:18
-Tags: 
-Category: 
-Slug: spyder-2.3-released
+Tags: v2-3, release
+Category: Releases
+Slug: spyder-v2-3-released
 Author: Carlos Córdoba
 Summary: Spyder 2.3 has been released
 
