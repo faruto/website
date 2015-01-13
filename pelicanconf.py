@@ -49,22 +49,15 @@ DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
     ('Features', '/features/'),
     ('Documentation', 'https://pythonhosted.org/spyder/'),
-#    ('Plugins', '/plugins/'),
     ('Support', '/support/'),
     ('Contribute', '/contribute/'),
     ('Blog', '/blog/'),
-#    ('Resources', '/resources/'),
-#    ('Archives', '/archives.html'),
-#    ('Tags', '/tags.html'),
-#    ('Category1', 'category/category1.html'),
-#    ('Category2', 'category/category2.html'),
 )
+
 LINKS = (
-#    ('Twitter', 'http://twitter.com/Spyder_IDE'),
-#    ('Python.org', 'http://python.org/'),
-#    ('Jinja2', 'http://jinja.pocoo.org/'),
-#    ('You can modify those links in your config file', '#'),
+    # ('Twitter', 'http://twitter.com/Spyder_IDE'),
 )
+
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
@@ -96,8 +89,8 @@ BOOTSTRAP_THEME = 'spacelab'
 #BOOTSTRAP_THEME = 'simplex'
 HIDE_SIDEBAR = False
 SHOW_ARTICLE_AUTHOR = True
-SITELOGO = 'images/spyder.png' 
-SITELOGO_SIZE = '75px' 
+SITELOGO = 'images/spyder.png'
+SITELOGO_SIZE = '75px'
 HIDE_SITENAME = False
 CUSTOM_CSS = 'static/custom.css'
 DISPLAY_BREADCRUMBS = True
@@ -147,7 +140,7 @@ RECENT_POST_COUNT = 4
 ARTICLE_URL = 'blog/{date:%Y}/{date:%m}/{slug}/'
 ARTICLE_SAVE_AS = '{0}index.html'.format(ARTICLE_URL)
 
-CATEGORIES_URL =  'categories/'  # from theme!!
+CATEGORIES_URL = 'categories/'  # from theme
 CATEGORY_URL = 'categories/{slug}/'
 CATEGORY_SAVE_AS = '{0}index.html'.format(CATEGORY_URL)
 CATEGORIES_SAVE_AS = 'categories/index.html'
@@ -196,14 +189,11 @@ STATIC_PATHS = [
     'favicon.ico',
     'robots.txt',
     'static/custom.css'
-#    'GFX',
-#    'extra/googleea75ea27535d4ffe.html',
 ]
 
 EXTRA_PATH_METADATA = {
     'static/favicon.ico': {'path': 'favicon.ico'},
     'static/robots.txt': {'path': 'robots.txt'},
-    #'static/googleea75ea27535d4ffe.html': {'path': 'googleea75ea27535d4ffe.html'},
 }
 
 DIRECT_TEMPLATES = (
