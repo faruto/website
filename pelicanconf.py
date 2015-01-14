@@ -47,6 +47,7 @@ DISQUS_SITENAME = 'spyder-ide'
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (
+    ('Home', '/'),
     ('Features', '/features/'),
     ('Documentation', 'https://pythonhosted.org/spyder/'),
     ('Support', '/support/'),
@@ -74,25 +75,13 @@ AUTHOR_FEED_RSS = None
 # bootstrap3 theme specific settings
 # ----------------------------------
 # based on https://github.com/DandyDev/pelican-bootstrap3
-
-# Bootswatch and other Bootstrap 3 themes - http://bootswatch.com/
-"""
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-BOOTSTRAP_THEME = 'cosmo'
-"""
-BOOTSTRAP_THEME = 'spacelab'
-#BOOTSTRAP_THEME = 'simplex'
 HIDE_SIDEBAR = False
 SHOW_ARTICLE_AUTHOR = True
 SITELOGO = 'images/spyder.png'
 SITELOGO_SIZE = '75px'
 HIDE_SITENAME = False
 CUSTOM_CSS = 'static/custom.css'
+CUSTOM_SCSS = 'static/custom.scss'
 DISPLAY_BREADCRUMBS = True
 
 # pygments styles
@@ -122,6 +111,11 @@ PYGMENTS_STYLE = 'vs'
 PYGMENTS_STYLE = 'zenburn'
 """
 PYGMENTS_STYLE = 'zenburn'
+
+
+#BOOTSTRAP_THEME = 'spyder'
+# blog
+DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
 
 # Pagination

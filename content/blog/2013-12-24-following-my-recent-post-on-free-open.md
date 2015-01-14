@@ -1,8 +1,8 @@
-Title: PyQt API #1, PyQt API #2 and PySide compatibility
+Title: WinPython Distribution
 Date: 2013-12-24 05:26
 Tags: Winpython
 Category: Spyder
-Slug: following-my-recent-post-on-free-open
+Slug: winpython-distribution
 Author: Pierre Raybaut
 Summary: TODO
 

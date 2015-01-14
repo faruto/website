@@ -1,0 +1,293 @@
+// =================
+// primary variables
+// =================
+$primary-color: rgb(15, 62, 98);
+$secondary-color: #fafafa;
+$footer-color: #414141;
+$text-color: rgb(99, 99, 99);
+$home-feature-background: "/images/home-feature-bg.png";
+$home-feature-background: "--";
+$body-background: "/images/body-background.png";
+$radius: 5px;
+
+// ===================
+// secondary variables
+// ===================
+$text-color-menu: darken($secondary-color, 10%);
+$text-color-top: $secondary-color;
+$link-color-top: $secondary-color;
+$background-color-top: $primary-color; 
+$background-color-footer: $primary-color;
+$background-color-footer: $footer-color;
+$background-color-subfooter: darken($background-color-footer, 10%);
+$text-color-footer: $secondary-color;
+$text-color-subfooter: darken($secondary-color, 10%);
+$body-color: $secondary-color;
+
+// ----------
+// typography
+// ----------
+$font: Helvetica, sans-serif;
+
+// ------
+// mixins
+// ------
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+/* =======
+   general
+   ======= */
+
+body{
+    color: $text-color;
+    text-font: $font;
+    background: $body-color url($body-background) 0 0 repeat;
+    padding-top: 100px;
+    padding-top: 0px;
+}
+
+#content {
+    padding:30px;
+    padding-left: 50px;
+}
+
+/* =================
+   blog and articles
+   ================= */
+
+.article-info {
+    padding: 10px;
+}
+
+.article-info-date {
+    padding: 10px;
+    padding-left:0px;
+}
+
+.padding-box {
+    padding:30px;
+    padding-left: 50px;
+}
+
+/* ===================
+   menu and navigation
+   =================== */
+
+.navbar {
+  margin: 0px;
+  padding-bottom: 20px;
+  border: 0px solid transparent;
+  @include border-radius(0px); 
+}
+
+.navbar-default {
+    background-color: $background-color-top;
+    .navbar-nav {
+
+    > li > a {
+        color: $text-color-menu;
+    
+        &:hover {
+            color:$link-color-top;
+        }
+      }
+    }
+
+    .navbar-brand {
+        color:$link-color-top;
+
+        &:hover {
+            color:$link-color-top;
+        }
+    }
+}
+
+.navbar-nav {
+  margin: 0px;
+
+  > li > a {
+    @include border-radius($radius); 
+    margin:    8px;
+    margin-top: 36px;
+    padding:    4px 8px;
+    line-height: 20px;
+  }
+}
+
+.navbar-toggle {
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+.navbar-search {
+    margin:25px;
+}
+
+
+
+/* =============
+   home carousel
+   ============= */
+
+.carousel-caption {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+/* ================
+   colors and theme
+   ================ */
+    /* under menu */
+    .under-menu {
+        background-color: $background-color-top;
+    }
+    div.under-menu > div > div > div > h1 {
+        color:#fafafa;
+    }
+    div.under-menu > div > div > div > ol {
+        background-color:transparent;
+        color:#fafafa;
+    }
+
+    /* links */
+
+
+    /* carousel */
+    #carousel-example-generic > ol > li {border-color:#bbbbbb;}
+    #carousel-example-generic > ol > li.active {
+        border-color:#cccccc;
+        background-color:#dd0000;
+        background-color:#aaaaaa;
+    }
+
+    .home-top {
+        background-color: $background-color-top;
+        background-image: url($home-feature-background);
+        background-repeat: no-repeat;
+        background-position: 40% 100%;
+        color: $text-color-top;
+    }
+
+    .well {
+        background-color: #ffffff;
+    }
+
+
+/* ===========
+   decorations
+   =========== */
+
+.separator_shadow { 
+    position:relative;
+    overflow:hidden;
+    height:40px;
+}
+
+.separator_shadow:before {
+    content: "";
+    position:absolute;
+    z-index: 1;
+    width:96%;
+    top: -12px;
+    height: 12px;
+    left: 2%;
+    border-radius: 50%;
+    box-shadow:0 0 20px rgba(0,0,0,0.75); }
+
+.spacer {
+    margin-top: 30px; /* define margin as you see fit */
+    
+    &-sm {
+        margin-top: 10px; /* define margin as you see fit */            
+    }
+
+    &-md {
+        margin-top: 20px; /* define margin as you see fit */            
+    }
+
+    &-lg {
+        margin-top: 40px; /* define margin as you see fit */            
+    }
+}
+
+#sidebar {
+    margin-top:0px;
+}
+  
+/* ======
+   footer 
+   ====== */
+
+.footer-area {
+    color: $text-color-footer;
+    background-color: $background-color-footer;
+    border-top-color: darken($background-color-footer, 10%);
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding-top: 16px;
+    margin-top: 32px;
+    font-size: 90%;
+
+    ul {
+        list-style:none;
+        list-style-position: inside;
+        padding:2px;
+        li {
+            padding:5px 5px;               
+        }    
+    }
+}
+
+.footer-area h3 {
+    color: #fafafa;
+    font-size: 120%;
+    font-weight:700;
+}
+
+#footer {
+    color: $text-color-subfooter;
+    background-color: $background-color-subfooter;
+    border-top-color: darken($background-color-subfooter, 10%);
+    border-top-style: solid;
+    border-top-width: 1px;
+    font-size: 75%;
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+ul.social-network, ul.copyright {
+    padding: 0px;
+    list-style:none;
+    margin: 10px 0px 10px 0px;
+}
+
+ul.social-network li, ul.copyright li {
+    padding:0px;
+    display:inline;
+    margin: 0px 5px;
+}
+
+/* =============
+   media queries
+   ============= */
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:14px;}
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a:hover {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:14px;}
+}

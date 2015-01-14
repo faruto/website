@@ -1,8 +1,8 @@
-Title: PyQt API #1, PyQt API #2 and PySide compatibility
+Title: PyQt and PySide compatibility
 Date: 2011-06-22 12:55
 Tags: PyQt, PySide
 Category: Spyder
-Slug: pyqt-api-1-pyqt-api-2-and-pyside
+Slug: pyqt-and-pyside-compatibility
 Author: Pierre Raybaut
 Summary: Short version for index and feeds
 

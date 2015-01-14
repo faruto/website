@@ -1,0 +1,23 @@
+<div class="container">
+    <hr>
+    <div class="row spacer">
+        <div class="col-lg-12">
+            <h2 class="text-center">Latest Blog Posts</h2>
+        </div>
+    </div>
+    <div class="row spacer">
+        {% set LATEST_POST_COUNT = 3 %}
+        {% for article in articles[:LATEST_POST_COUNT] %}
+        <div class="col-lg-{{ 12 // LATEST_POST_COUNT}}">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4 class="text-center">{{ article.title }}</h4>
+                    <p class="text-center"><span class="modified"><i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}"> {{ article.date|strftime('%d %B %Y') }}</time></span></p>
+                    <p class="text-center"><a class="btn btn-primary" href="{{ SITEURL }}/{{ article.url }}">Read more</a></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row spacer"></div>
+</div>

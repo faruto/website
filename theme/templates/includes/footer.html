@@ -1,61 +1,75 @@
+
+
 <footer class="footer-area">
     <div class="container">
         <div class="row">
+            <br>
             <div class="col-md-3">
-                <h3>Quick Links</h5>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Source code on Github</a></li>
+                    <li><a href="#">Video tutorials</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
             </div>
             <div class="col-md-3">
-                <h3>Support</h5>
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Download and install Spyder</a></li>
+                    <li><a href="#">Getting started with Spyder</a></li>
+                    <li><a href="http://groups.google.com/group/spyderlib">Join user discussion group</a></li>
+                    <li><a href="http://stackoverflow.com/questions/tagged/spyder">Ask a question in Stack Overflow</a></li>
+                </ul>
             </div>
             <div class="col-md-3">
-                <h3>Contribute</h5>
+                <h3>Contribute</h3>
+                <ul>
+                    <li><a href="#">Make a donation</a></li>
+                    <li><a href="#">Suggest new features</a></li>
+                    <li><a href="#">Submit a bug report</a></li>
+                    <li><a href="#">Check out issues on Github</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
             </div>
             <div class="col-md-3">
-                <h3>Latest news</h5>
+                <h3>Latest news</h3>
                 <a class="twitter-timeline"
                  href="https://twitter.com/Spyder_IDE"
                  data-widget-id="549146314311598081"
                  data-chrome="nofooter transparent noheader nofooter noscrollbar noborders"
                  width="300"
                  height="500"
-                 data-tweet-limit="3">
+                 data-tweet-limit="2">
                 Tweets by @Spyder_IDE
                 </a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
-	</div>
+	  </div>
+        <div class="row spacer"></div>
     </div>
 </footer>
+
 <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    {% if articles %}
-                    {% set copy_date = articles[0].date.strftime('%Y') %}
-                    {% else %}
-                    {% set copy_date = '' %}
-                    {% endif %}
-                    <div class="col-md-10">
-                        <ul>
-<li>
-                        &copy; {{ copy_date }} <a href="https://github.com/orgs/spyder-ide/people" target="_blank">{{ AUTHOR }}</a> &middot; Powered by <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
-                        {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
-                        {% from 'includes/cc-license.html' import cc_license_mark %}
-                        <p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>
-                        {% endif %}
-</li>
-</ul>
-                    </div>
-                    <div class="col-md-2">
-
-                            <ul class="social-network">
-                                <li><a title="Google+" href="https://plus.google.com/u/0/b/107193318474220481102/107193318474220481102/posts" target="_blank"><i class="fa fa-google-plus fa-2x"> </i></a></li>
-                                <li><a title="Facebook" href="https://www.facebook.com/pages/Spyder-IDE/1575444006019383" target="_blank"><i class="fa fa-facebook fa-2x"> </i></a></li>
-                                <li><a title="Twitter" href="https://twitter.com/Spyder_IDE" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a></li>
-                                <li><a title="Github" href="https://github.com/spyder-ide" target="_blank"><i class="fa fa-github fa-2x"> </i></a></li>
-                            </ul>
-                    </div>
-
-                </div>
+    <div class="container">
+        <div class="row">
+            {% if articles %}
+            {% set copy_date = articles[0].date.strftime('%Y') %}
+            {% else %}
+            {% set copy_date = '' %}
+            {% endif %}
+            <div class="col-md-10">
+                <ul class="copyright">
+                    <li>&copy; {{ copy_date }} <a href="https://github.com/orgs/spyder-ide/people" target="_blank">{{ AUTHOR }}</a> &middot; Powered by <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>, <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and <a href="http://getbootstrap.com" target="_blank">Bootstrap</a> {%- if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %} {% from 'includes/cc-license.html' import cc_license_mark %}<p><small>{{ cc_license_mark(cc_name=CC_LICENSE,derivatives=CC_LICENSE_DERIVATIVES,commercial=CC_LICENSE_COMMERCIAL,attr_markup=CC_ATTR_MARKUP,attr_props={'title':SITENAME,'name':article.author if article else AUTHOR,'url':SITEURL}) }}</small></p>{% endif %}</li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-4">
+                <ul class="social-network alig">
+                    <li><a title="Google+" href="https://plus.google.com/u/0/b/107193318474220481102/107193318474220481102/posts" target="_blank"><i class="fa fa-google-plus fa-2x"> </i></a></li>
+                    <li><a title="Facebook" href="https://www.facebook.com/pages/Spyder-IDE/1575444006019383" target="_blank"><i class="fa fa-facebook fa-2x"> </i></a></li>
+                    <li><a title="Twitter" href="https://twitter.com/Spyder_IDE" target="_blank"><i class="fa fa-twitter fa-2x"> </i></a></li>
+                    <li><a title="Github" href="https://github.com/spyder-ide" target="_blank"><i class="fa fa-github fa-2x"> </i></a></li>
+                </ul>
             </div>
          </div>
      </div>

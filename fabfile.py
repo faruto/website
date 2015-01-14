@@ -1,10 +1,12 @@
 from fabric.api import *
 import fabric.contrib.project as project
 import os
+import os.path as osp
 import shutil
 import sys
 import SimpleHTTPServer
 import SocketServer
+import sass
 
 from pelicanconf import OUTPUT_PATH
 
@@ -25,43 +27,60 @@ env.cloudfiles_api_key = 'my_rackspace_api_key'
 env.cloudfiles_container = 'my_cloudfiles_container'
 
 
+def scss():
+    """ """
+    ifile = 'content/static/custom.scss'
+    ofile = 'content/static/custom.css'
+    style = 'compressed'
+    result = sass.compile(filename=ifile, output_style=style)
+
+    with open(ofile, 'w') as f:
+        f.write(result)
+
+
 def clean():
     if os.path.isdir(DEPLOY_PATH):
         shutil.rmtree(env.deploy_path)
-        #local('rm -rf {deploy_path}'.format(**env))
-        #local('mkdir {deploy_path}'.format(**env))
-	#for ext in REMOVE_EXTENSIONS:
-    #        local("find . -type f | grep '{0}'$ | xargs rm".format(ext))
+
 
 def build():
     local('pelican -s pelicanconf.py')
 
+
 def rebuild():
     clean()
+    scss()
     build()
+#    regenerate()
+
 
 def regenerate():
     local('pelican -r -s pelicanconf.py')
+
 
 def serve():
     os.chdir(env.deploy_path)
 
     PORT = 8888
+
     class AddressReuseTCPServer(SocketServer.TCPServer):
         allow_reuse_address = True
 
-    server = AddressReuseTCPServer(('', PORT), SimpleHTTPServer.SimpleHTTPRequestHandler)
+    server = AddressReuseTCPServer(('', PORT),
+                                   SimpleHTTPServer.SimpleHTTPRequestHandler)
 
     sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
     server.serve_forever()
 
+
 def reserve():
-    clean()
-    build()
+    rebuild()
     serve()
+
 
 def preview():
     local('pelican -s publishconf.py')
+
 
 def cf_upload():
     rebuild()
@@ -70,6 +89,7 @@ def cf_upload():
           '-U {cloudfiles_username} '
           '-K {cloudfiles_api_key} '
           'upload -c {cloudfiles_container} .'.format(**env))
+
 
 @hosts(production)
 def publish():
@@ -81,3 +101,6 @@ def publish():
         delete=True,
         extra_opts='-c',
     )
+
+if __name__ == '__main__':
+    reserve()
