@@ -13,7 +13,7 @@ cd spyder-website
 Installation
 ------------
 
-**Using conda
+**Using conda**
 
 You need to have the anaconda distribution by continuum installed.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 Fresh install (install latest available packages)
 -------------------------------------------------
 
-**Using conda
+**Using conda**
 
 You need to have the anaconda distribution by continuum installed.
 
